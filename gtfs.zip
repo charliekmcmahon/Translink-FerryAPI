@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<!--[if IE 9]> <html lang="en_AU" class="ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en_AU"  > <!--<![endif]-->
+  <head>
+    
+
+<meta charset="utf-8" />
+      <meta name="csrf_field_name" content="_csrf_token" />
+      <meta name="_csrf_token" content="ImQwNzIyNDFkMGVmMWYzN2UxM2QyODg4ZDNmOGM5ZTBlZGU3MTQ5NmIi.ZiCV2g.h2B1IQoqwnu_-IrvNcuFEyWldOE" />
+
+      <meta name="generator" content="ckan 2.10.4" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="DCTERMS.publisher" scheme="AGLSTERMS.AglsAgent" content="corporateName=The State of Queensland; jurisdiction=Queensland" />
+<meta name="DCTERMS.jurisdiction" scheme="AGLSTERMS.AglsJuri" content="Queensland" />
+<meta name="DCTERMS.type" scheme="DCTERMS.DCMIType" content="Text" />
+
+
+<meta name="DCTERMS.title" content="South East Queensland (SEQ) - general transit feed specification" />
+
+
+  <meta name="DCTERMS.creator" content="c=AU; o=The State of Queensland; ou=Transport and Main Roads" scheme="AGLSTERMS.GOLD" />
+
+
+<meta name="DCTERMS.created" content="2023-11-14" />
+<meta name="DCTERMS.modified" content="2023-11-14" />
+<meta name="DCTERMS.description" content="Network data for South East Queensland urban bus, rail, light rail and ferry services. Each text file models a particular aspect of transit information: stops, routes, trips, and other schedule data. See https://developers.google.com/transit/gtfs for more information.
+
+________________________________________________________
+PILOT SEQ DATASET - Translink is publishing as a trial a SEQ GTFS dataset that incorporates school services, accessible via the following URL:..." />
+<meta name="DCTERMS.identifier" content="e43b6b9f-fc2b-4630-a7c9-86dd5483552b" />
+
+<meta name="AGLSTERMS.documentType" scheme="AGLSTERMS.agls-document" content="dataset" />
+
+    <title>South East Queensland (SEQ) - general transit feed specification - Translink General transit feed specification (GTFS) - Open Data Portal | Queensland Government</title>
+
+    
+    <link rel="shortcut icon" href="https://www.qld.gov.au/favicon.ico" />
+    
+  
+    
+  
+      
+      
+      
+    
+  
+
+
+    
+    
+
+
+  
+
+
+    
+      
+      
+    
+  
+  <meta property="og:title" content="Translink General transit feed specification (GTFS) - South East Queensland (SEQ) - general transit feed specification - Open Data Portal | Queensland Government">
+  <meta property="og:description" content="Network data for South East Queensland urban bus, rail, light rail and ferry services. Each text file models a particular aspect of transit information: stops, routes, trips, and other schedule...">
+
+
+    
+    <link href="/webassets/base/1c87a999_main.css" rel="stylesheet"/>
+<link href="/webassets/ckanext-activity/6ac15be0_activity.css" rel="stylesheet"/>
+<link href="/webassets/ckanext-harvest/c95a0af2_harvest_css.css" rel="stylesheet"/>
+<link href="/webassets/ckanext-scheming/728ec589_scheming_css.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" rel="stylesheet" />
+  <link href="/__data/assets/git_bridge/0019/100846/open-data/dist/qld.css?h=288c0ce" rel="stylesheet" />
+  
+  
+
+  </head>
+
+  
+  <body data-site-root="https://www.data.qld.gov.au/" data-locale-root="https://www.data.qld.gov.au/" >
+
+    
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PJBVFG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PJBVFG');</script>
+<!-- End Google Tag Manager -->
+
+    
+    <div class="visually-hidden-focusable"><a href="#content">Skip to main content</a></div>
+  
+
+
+  
+    
+
+ 
+<div class="account-masthead">
+  <div class="container">
+     
+    <nav class="account not-authed">
+      <ul class="unstyled">
+        
+        <li><a href="/user/login">Log in</a></li>
+        
+        <li><a class="sub" href="/user/register">Register</a></li>
+         
+        
+        <li><a href="/datarequest">Request data</a></li>
+        
+      </ul>
+    </nav>
+     
+  </div>
+</div>
+
+<header class="navbar navbar-static-top masthead">
+  <div class="container">
+    
+        
+    
+
+    <nav
+      
+      class="navbar navbar-expand-lg navbar-light navbar-collapse"
+      
+    >
+    
+    <hgroup class="header-image navbar-left">
+      <a class="logo" href="https://www.qld.gov.au" title="Link to Queensland Gov website">
+        <img src="/qg-coa/qg-coa-white.svg" alt="Queensland Government" class="d-none d-sm-block">
+        <img src="/qg-coa/qg-coa-stacked-white.svg" alt="Queensland Government" class="d-sm-none d-md-none d-lg-none d-xl-none">
+        <img src="/qg-coa/qg-coa-stacked.svg" alt="Queensland Government" class="d-none d-sm-none d-md-none d-lg-none d-xl-none qg-print-coat-of-arms">
+      </a>
+      <div class="header__data-portal">
+        <a href="/">Open Data Portal</a>
+      </div>
+    </hgroup>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navigation-toggle"
+      aria-controls="main-navigation-toggle" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="fa fa-bars text-white"></span>
+    </button>
+    
+
+    <div class="main-navbar collapse navbar-collapse" id="main-navigation-toggle">
+      <nav class="section navigation">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 nav nav-pills">
+        
+          
+          
+          <li class="active"><a href="/dataset/">Data</a></li>
+          <li>
+            <a href="/article/news-and-events">News and events</a>
+          </li>
+          <li>
+            <a href="/article/case-studies">Case studies</a>
+          </li>
+          <li>
+            <a href="/article/standards-and-guidance">Standards and guidance</a>
+          </li>
+          <li><a href="/article/contact">Contact</a></li>
+          
+        
+        </ul>
+      
+        
+          <form class="d-flex site-search" action="/dataset/" method="get">
+              <label class="d-none" for="field-sitewide-search">Search Datasets...</label>
+              <input id="field-sitewide-search" class="form-control me-2"  type="text" name="q" placeholder="Search" aria-label="Search datasets..."/>
+              <button class="btn" type="submit" aria-label="Submit"><i class="fa fa-search"></i></button>
+          </form>
+      
+      
+      </nav>
+    </div>
+    </nav>
+  </div>
+</header>
+
+  
+    
+    <div role="main" class=>
+
+      <div id="content" class="container">
+        
+          
+    
+            <div class="flash-messages">
+              
+                
+              
+            </div>
+          
+
+
+          
+            <div class="toolbar" role="navigation" aria-label="Breadcrumb">
+              
+                
+                  <ol class="breadcrumb">
+                    
+<li class="home"><a href="/" aria-label="Home"><i class="fa fa-home"></i><span> Home</span></a></li>
+                    
+    
+    
+    <li><a href="/organization/">Organisations</a></li>
+    <li><a href="/organization/transport-and-main-roads">Transport and Main Roads</a></li>
+    
+    <li class="active"><a href="/dataset/general-transit-feed-specification-gtfs-translink">Translink General transit feed specification (GTFS)</a></li>
+    <li class="active"><a href="">South East Queensland (SEQ) - general transit feed specification</a></li>
+
+                  </ol>
+                
+              
+            </div>
+          
+
+          <div class="row wrapper">
+            
+            
+
+
+            
+    <aside class="secondary col-sm-5 col-md-4 col-lg-4">
+        
+        
+
+  
+    
+
+
+  
+    <section class="module module-narrow resources">
+      
+        
+          <h2 class="module-heading"><i class="fa fa-copy"></i> Resources</h2>
+        
+        
+  <ul class="list-unstyled nav nav-simple">
+    
+      <li class="nav-item active">
+        <a href="/dataset/general-transit-feed-specification-gtfs-translink/resource/e43b6b9f-fc2b-4630-a7c9-86dd5483552b?inner_span=True" title="South East Queensland (SEQ) - general transit feed specification">South East Queensland...</a>
+      </li>
+    
+      <li class="nav-item">
+        <a href="/dataset/general-transit-feed-specification-gtfs-translink/resource/999196bf-8815-47b5-ac90-e8caa9a7aee3?inner_span=True" title="Bowen—general transit feed specification ">Bowen—general transit...</a>
+      </li>
+    
+      <li class="nav-item">
+        <a href="/dataset/general-transit-feed-specification-gtfs-translink/resource/699184c3-8c0e-44db-8a83-7e23709aefbe?inner_span=True" title="Bundaberg—general transit feed specification ">Bundaberg—general...</a>
+      </li>
+    
+      <li class="nav-item">
+        <a href="/dataset/general-transit-feed-specification-gtfs-translink/resource/9850f8e5-f572-4de7-97c5-84d45526f9bd?inner_span=True" title="Cairns—general transit feed specification ">Cairns—general...</a>
+      </li>
+    
+      <li class="nav-item">
+        <a href="/dataset/general-transit-feed-specification-gtfs-translink/resource/254f67be-ea12-4da1-8475-c5424359290e?inner_span=True" title="Gladstone—general transit feed specification ">Gladstone—general...</a>
+      </li>
+    
+      <li class="nav-item">
+        <a href="/dataset/general-transit-feed-specification-gtfs-translink/resource/e0366e86-298d-49e5-adbd-7be68c9e4b44?inner_span=True" title="Gympie—general transit feed specification ">Gympie—general...</a>
+      </li>
+    
+      <li class="nav-item">
+        <a href="/dataset/general-transit-feed-specification-gtfs-translink/resource/eaf2337f-368e-44ef-90e4-65858609b64e?inner_span=True" title="Innisfail—general transit feed specification ">Innisfail—general...</a>
+      </li>
+    
+      <li class="nav-item">
+        <a href="/dataset/general-transit-feed-specification-gtfs-translink/resource/81202b71-e93b-4707-a991-4a03c4c0d3bb?inner_span=True" title="Kilcoy—general transit feed specification ">Kilcoy—general...</a>
+      </li>
+    
+      <li class="nav-item">
+        <a href="/dataset/general-transit-feed-specification-gtfs-translink/resource/03426b3e-1ea6-4878-bd9b-cfaef7ca2b1d?inner_span=True" title="Mackay—general transit feed specification ">Mackay—general...</a>
+      </li>
+    
+      <li class="nav-item">
+        <a href="/dataset/general-transit-feed-specification-gtfs-translink/resource/81030a70-b1e1-4cb1-b7ae-67051d1368e5?inner_span=True" title="Magnetic Island—general transit feed specification ">Magnetic...</a>
+      </li>
+    
+      <li class="nav-item">
+        <a href="/dataset/general-transit-feed-specification-gtfs-translink/resource/a7a3282c-ce87-4b4e-8b7b-70a4cc081ed6?inner_span=True" title="Magnetic Island Ferry—general transit feed specification ">Magnetic Island...</a>
+      </li>
+    
+      <li class="nav-item">
+        <a href="/dataset/general-transit-feed-specification-gtfs-translink/resource/f1e2c86e-eac3-4852-b2c6-f5fc150645a5?inner_span=True" title="Maleny–Landsborough—general transit feed specification ">Maleny–Landsborough—ge...</a>
+      </li>
+    
+      <li class="nav-item">
+        <a href="/dataset/general-transit-feed-specification-gtfs-translink/resource/ee40c2d4-f170-426d-9719-3cc3e32c567c?inner_span=True" title="Maryborough-Hervey Bay—general transit feed specification ">Maryborough-Hervey...</a>
+      </li>
+    
+      <li class="nav-item">
+        <a href="/dataset/general-transit-feed-specification-gtfs-translink/resource/69133a97-7752-4433-b0f1-164ede15f0e5?inner_span=True" title="North Stradbroke Island—general transit feed specification ">North Stradbroke...</a>
+      </li>
+    
+      <li class="nav-item">
+        <a href="/dataset/general-transit-feed-specification-gtfs-translink/resource/ac8aa7e0-0153-43b8-bb3d-5848eefb5ac0?inner_span=True" title="Rockhampton—general transit feed specification  (SUPERCEDED)">Rockhampton—general...</a>
+      </li>
+    
+      <li class="nav-item">
+        <a href="/dataset/general-transit-feed-specification-gtfs-translink/resource/535a9518-0fb0-41a5-a7b9-4aa67120d173?inner_span=True" title="Rockhampton-Yeppoon - general transit feed specification">Rockhampton-Yeppoon -...</a>
+      </li>
+    
+      <li class="nav-item">
+        <a href="/dataset/general-transit-feed-specification-gtfs-translink/resource/48501fd9-148b-4b96-a9fa-b412d768048c?inner_span=True" title="Toowoomba—general transit feed specification ">Toowoomba—general...</a>
+      </li>
+    
+      <li class="nav-item">
+        <a href="/dataset/general-transit-feed-specification-gtfs-translink/resource/52000300-84cf-4a16-b85f-66c9debdb6b6?inner_span=True" title="Townsville—general transit feed specification ">Townsville—general...</a>
+      </li>
+    
+      <li class="nav-item">
+        <a href="/dataset/general-transit-feed-specification-gtfs-translink/resource/4b6cc276-0d70-4c9c-adac-0b8cb384268a?inner_span=True" title="Warwick—general transit feed specification ">Warwick—general...</a>
+      </li>
+    
+      <li class="nav-item">
+        <a href="/dataset/general-transit-feed-specification-gtfs-translink/resource/2f002735-7373-46f0-b63d-8ba3a0b28f65?inner_span=True" title="Whitsundays—general transit feed specification ">Whitsundays—general...</a>
+      </li>
+    
+      <li class="nav-item">
+        <a href="/dataset/general-transit-feed-specification-gtfs-translink/resource/63dec6b1-bb77-470f-bb34-54fa0db3d6a7?inner_span=True" title="Yeppoon—general transit feed specification  (SUPERCEDED)">Yeppoon—general...</a>
+      </li>
+    
+  </ul>
+
+      
+    </section>
+  
+
+  
+
+  <tr>
+          <th scope="row">License</th>
+          <td>
+
+
+  
+    
+  
+    <a href="https://creativecommons.org/licenses/by/4.0/" rel="dc:rights">Creative Commons Attribution 4.0</a>
+  
+
+  
+</td>
+        </tr>
+
+    </aside>
+
+
+            
+    <div class="primary col-xs-12 col-sm-7 col-md-8 col-lg-8">
+        
+        
+  
+    <section class="module module-resource">
+      
+        <div class="module-content">
+          <div class="actions">
+            
+            <ul>
+              
+                
+                    
+  
+                  
+                
+  
+
+                
+                
+                  <li>
+                    <div class="btn-group">
+                    <a class="btn btn-primary resource-url-analytics resource-type-None resource-btn" href="https://gtfsrt.api.translink.com.au/GTFS/SEQ_GTFS.zip">
+                      
+                        <i class="fa fa-external-link"></i> Go to resource
+                      
+                    </a>
+                    
+                      
+                      
+                    
+                    
+                    </div>
+                  </li>
+                
+                
+              
+            </ul>
+            
+          </div>
+        </div>
+        
+          
+          
+    <h1 class="page-heading">
+        
+
+        South East Queensland (SEQ) - general transit feed specification
+
+        
+    </h1>
+
+          
+            
+              <p class="text-muted ellipsis">URL: <a class="resource-url-analytics" href="https://gtfsrt.api.translink.com.au/GTFS/SEQ_GTFS.zip" title="https://gtfsrt.api.translink.com.au/GTFS/SEQ_GTFS.zip">https://gtfsrt.api.translink.com.au/GTFS/SEQ_GTFS.zip</a></p>
+            
+          
+          <div class="prose notes" property="rdfs:label">
+            
+              <p>Network data for South East Queensland urban bus, rail, light rail and ferry services. Each text file models a particular aspect of transit information: stops, routes, trips, and other schedule data. See <a href="https://developers.google.com/transit/gtfs" target="_blank" rel="nofollow">https://developers.google.com/transit/gtfs</a> for more information.</p>
+<hr>
+<p>PILOT SEQ DATASET - Translink is publishing as a trial a SEQ GTFS dataset that incorporates school services, accessible via the following URL: <a href="https://gtfsrt.api.translink.com.au/gtfs/SEQ_SCH_GTFS.zip" target="_blank" rel="nofollow">https://gtfsrt.api.translink.com.au/gtfs/SEQ_SCH_GTFS.zip</a>. Please be aware that this dataset is a pilot release, and there may be updates to the file structure or the possibility of the dataset being withdrawn at any given time.</p>
+<hr>
+            
+            
+          </div>
+        
+        
+        
+          
+        
+      
+    </section>
+  
+
+  
+  
+  
+
+  <div class="module-content"><h2>Additional Information</h2><table class="table table-striped table-bordered table-condensed" data-module="table-toggle-more"><thead>
+          <tr>
+            <th scope="col">Field</th>
+            <th scope="col">Value</th>
+          </tr>
+        </thead><tbody><tr>
+    <th scope="row">Data last updated</th>
+     <td>14 November 2023</td>
+  </tr><tr>
+          <th scope="row">Metadata last updated</th>
+          <td>14 November 2023</td>
+        </tr><tr>
+    <th scope="row">Created</th>
+    <td>14 November 2023</td>
+  </tr><tr>
+          <th scope="row">Format</th>
+          <td>ZIP</td>
+        </tr><tr>
+          <th scope="row">License</th>
+          <td>
+
+
+  
+    
+  
+    <a href="https://creativecommons.org/licenses/by/4.0/" rel="dc:rights">Creative Commons Attribution 4.0</a>
+  
+
+  
+</td>
+        </tr>
+            
+              <tr class="toggle-more"><th scope="row">Align default schema</th><td>False</td></tr>
+            
+          
+            
+              <tr class="toggle-more"><th scope="row">Archiver</th><td>{&#39;resource_timestamp&#39;: None, &#39;status_id&#39;: 0, &#39;is_broken&#39;: False, &#39;reason&#39;: &#39;&#39;, &#39;url_redirected_to&#39;: None, &#39;cache_filepath&#39;: &#39;archive/e4/e43b6b9f-fc2b-4630-a7c9-86dd5483552b/SEQ_GTFS.zip&#39;, &#39;cache_url&#39;: &#39;https://www.data.qld.gov.au/dataset/1c4c0295-135f-48d8-bc26-7391ffc5fd70/resource/e43b6b9f-fc2b-4630-a7c9-86dd5483552b/archive/SEQ_GTFS.zip&#39;, &#39;size&#39;: 26540138, &#39;mimetype&#39;: &#39;application/x-zip-compressed&#39;, &#39;hash&#39;: &#39;dc829aedd28e0929a8e9fa2356bf73b7f83f06b7&#39;, &#39;etag&#39;: None, &#39;last_modified&#39;: None, &#39;first_failure&#39;: None, &#39;last_success&#39;: &#39;2023-11-13T20:44:56.454489&#39;, &#39;failure_count&#39;: 0, &#39;created&#39;: &#39;2023-11-13T20:44:04.700782&#39;, &#39;updated&#39;: &#39;2023-11-13T20:44:56.454489&#39;, &#39;status&#39;: &#39;Archived successfully&#39;, &#39;is_broken_printable&#39;: &#39;Downloaded OK&#39;}</td></tr>
+            
+          
+            
+          
+            
+              <tr class="toggle-more"><th scope="row">Datastore active</th><td>False</td></tr>
+            
+          
+            
+              <tr class="toggle-more"><th scope="row">Datastore contains all records of source file</th><td>False</td></tr>
+            
+          
+            
+          
+            
+              <tr class="toggle-more"><th scope="row">Has views</th><td>False</td></tr>
+            
+          
+            
+              <tr class="toggle-more"><th scope="row">Id</th><td>e43b6b9f-fc2b-4630-a7c9-86dd5483552b</td></tr>
+            
+          
+            
+          
+            
+          
+            
+              <tr class="toggle-more"><th scope="row">Nature of change</th><td>edit-resource-with-no-new-data</td></tr>
+            
+          
+            
+              <tr class="toggle-more"><th scope="row">Package id</th><td>1c4c0295-135f-48d8-bc26-7391ffc5fd70</td></tr>
+            
+          
+            
+              <tr class="toggle-more"><th scope="row">Position</th><td>0</td></tr>
+            
+          
+            
+              <tr class="toggle-more"><th scope="row">Qa</th><td>{&#39;resource_timestamp&#39;: None, &#39;archival_timestamp&#39;: &#39;2023-11-13T20:44:56.454489&#39;, &#39;openness_score&#39;: 1, &#39;openness_score_reason&#39;: &#39;Content of file appeared to be format &#34;ZIP&#34; which receives openness score: 1.&#39;, &#39;format&#39;: &#39;ZIP&#39;, &#39;created&#39;: &#39;2023-11-13T20:44:17.016682&#39;, &#39;updated&#39;: &#39;2023-11-13T20:45:10.394433&#39;}</td></tr>
+            
+          
+            
+              <tr class="toggle-more"><th scope="row">Size</th><td>30 bytes</td></tr>
+            
+          
+            
+              <tr class="toggle-more"><th scope="row">State</th><td>active</td></tr>
+            
+          
+            
+              <tr class="toggle-more"><th scope="row">Update frequency</th><td>annually</td></tr>
+            
+          
+            
+              <tr class="toggle-more"><th scope="row">Update frequency days</th><td>{&#34;monthly&#34;: 30, &#34;quarterly&#34;: 91, &#34;half-yearly&#34;: 182, &#34;annually&#34;: 365}</td></tr>
+            
+          
+ <tr>
+                <th scope="row">Size</th>
+                <td>
+
+
+  
+
+
+  30 bytes
+</td>
+              </tr><tr>
+                <th scope="row">Aligned with default data schema</th>
+                <td>FALSE</td>
+              </tr></tbody>
+    </table>
+
+
+  </div>
+
+  
+<div class="qa openness-1">
+    
+      <span title="Reason : Content of file appeared to be format &#34;ZIP&#34; which receives openness score: 1. Checked: 14 November 2023">
+        <a href="https://www.data.qld.gov.au/article/standards-and-guidance/data-usability-rating" target="_blank">Data usability rating</a>
+        : 
+<span class="star-rating"><span class="star-rating-stars"><img src="/tick_green.svg" width="16" height="16"><img src="/tick_grey.svg" width="16" height="16"><img src="/tick_grey.svg" width="16" height="16"><img src="/tick_grey.svg" width="16" height="16"><img src="/tick_grey.svg" width="16" height="16"></span></span> <br>
+        
+
+
+  <div class="star-openness_score-entry">
+    
+      Contains non-machine readable open data.
+    
+  </div>
+ <br>
+    
+</div>
+  
+<div class="archiver link-not-broken">Link is ok<br>
+    
+  <span>Link checked: 14 November 2023</span><br>
+</div>
+<br>
+  
+<div class="archiver link-cached"><a href="https://www.data.qld.gov.au/dataset/1c4c0295-135f-48d8-bc26-7391ffc5fd70/resource/e43b6b9f-fc2b-4630-a7c9-86dd5483552b/archive/SEQ_GTFS.zip">
+      <span class="fa fa-download"></span>
+      Download cached copy
+    </a><br>
+    Size: 26.5 MB <br>
+    Cached on: 14 November 2023
+    <br>
+  
+</div>
+
+
+    </div>
+
+          </div>
+        
+      </div>
+    </div>
+  
+    <footer class="site-footer">
+    <div class="container">
+        <ul>
+            <li><a href="https://www.qld.gov.au/contact-us" class="no-print">Contact us</a></li>
+            <li class="mobile-hidden"><a href="https://www.qld.gov.au/help" class="no-print">Help</a></li>
+            <li><a href="https://www.qld.gov.au/legal/copyright">Copyright</a></li>
+            <li><a href="https://www.qld.gov.au/legal/disclaimer">Disclaimer</a></li>
+            <li><a href="https://www.qld.gov.au/legal/privacy">Privacy</a></li>
+            <li><a href="https://www.qld.gov.au/about/rights-accountability/right-to-information">Right to information</a></li>
+            <li class="mobile-hidden"><a href="https://www.qld.gov.au/help/accessibility" class="no-print">Accessibility</a></li>
+            <li class="mobile-hidden"><a href="http://www.smartjobs.qld.gov.au/" class="no-print">Jobs in Queensland Government</a></li>
+            <li id="link-languages"><a href="https://www.qld.gov.au/help/languages" class="no-print">Other languages</a></li>
+        </ul>
+        <div class="site-footer__copyright">
+            <p>&copy; The State of Queensland 1995-2024</p>
+        </div>
+        <div class="site-footer__signoff">
+            <p><a href="https://www.qld.gov.au">Queensland Government</a></p>
+        </div>
+    </div>
+</footer>
+  
+  
+  
+  
+  
+    
+  
+  
+    
+    
+
+    
+    
+
+
+
+  
+
+      
+
+    
+    
+    <link href="/webassets/data_qld_theme/aa11d45a_data-qld.css" rel="stylesheet"/>
+<link href="/webassets/vendor/f3b8236b_select2.css" rel="stylesheet"/>
+<link href="/webassets/vendor/d05bf0e7_fontawesome.css" rel="stylesheet"/>
+<link href="/webassets/ckanext-validation_schema_generator/bb85df96-validation_schema_generator.css" rel="stylesheet"/>
+    <script src="/webassets/vendor/8c3c143a_jquery.js" type="text/javascript"></script>
+<script src="/webassets/vendor/5027b870_vendor.js" type="text/javascript"></script>
+<script src="/webassets/vendor/6d1ad7e6_bootstrap.js" type="text/javascript"></script>
+<script src="/webassets/base/6fddaa3f_main.js" type="text/javascript"></script>
+<script src="/webassets/base/0d750fad_ckan.js" type="text/javascript"></script>
+<script src="/webassets/base/cd2c0272_tracking.js" type="text/javascript"></script>
+<script src="/webassets/ckanext-validation_schema_generator/d41d8cd9-validation_schema_generator.js" type="text/javascript"></script>
+<script src="/webassets/activity/0fdb5ee0_activity.js" type="text/javascript"></script>
+  </body>
+</html>

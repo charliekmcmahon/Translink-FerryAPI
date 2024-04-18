@@ -1,0 +1,33 @@
+{
+  "name": "translink-ferryapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "adm-zip": "^0.5.12",
+    "csv-parse": "^5.5.5",
+    "data-uri-to-buffer": "^4.0.1",
+    "fetch-blob": "^3.2.0",
+    "formdata-polyfill": "^4.0.10",
+    "long": "^5.2.3",
+    "node-domexception": "^1.0.0",
+    "node-fetch": "^3.3.2",
+    "protobufjs": "^7.2.6",
+    "undici-types": "^5.26.5",
+    "web-streams-polyfill": "^3.3.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charliekmcmahon/Translink-FerryAPI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/charliekmcmahon/Translink-FerryAPI/issues"
+  },
+  "homepage": "https://github.com/charliekmcmahon/Translink-FerryAPI#readme"
+}
